@@ -20,25 +20,10 @@ We need an API that can return the total sales commissions for a given sales rep
 
 ## Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+bundle install
+bundle exec rails db:create
+```
 
-Things you may want to cover:
+Use `bundle exec rspec` to run tests
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
