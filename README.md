@@ -20,6 +20,8 @@ We need an API that can return the total sales commissions for a given sales rep
 
 ## Setup
 
+Expects a running PostgreSQL database
+
 ```
 bundle install
 bundle exec rails db:create
