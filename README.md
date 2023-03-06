@@ -1,4 +1,10 @@
-# README
+# Sales Commission Kata
+
+## Purpose
+
+These coding exercises are meant to help Spiff gain insight into how you would tackle actual feature requests by the product team. The exercises are relatively simple, but you are encouraged to treat them as if you were working on the Spiff codebase. **This means applying the same attention to code quality, tests, pull requests, commits, etc as you normally would.**
+
+**_Quality is valued above quantity. We value simple and readable code_**
 
 ## Instructions
 
@@ -18,8 +24,20 @@ You have been given a Ruby program that calculates the commission for each sales
 
 ## Setup
 
+1. Clone the repo (don't fork)
+2. Point the remote origin to a new repo under your account
+3.
+
 ```
 bundle install
 bundle exec rspec
 ```
+
+4. Refactor, testing and committing along the way
+4. Create a pull request on your repo when finished
+
+## Guidelines
+
+* Please leave any comments that will help the reader understand important decisions you made, shortcuts taken, or things you would do differently in the future.
+* Please talk out loud while pairing, explaining your intentions and decision making.
 
