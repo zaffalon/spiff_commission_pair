@@ -16,16 +16,10 @@ The commission for each sales representative is calculated by multiplying their 
 
 You have been given a Ruby program that calculates the commission for each sales representative based on the total sales made by the team and their individual sales. The code is working, but it is hard to read, difficult to understand, and hard to maintain. Your task is to refactor the code to make it easier to read and maintain while preserving its behavior.
 
-We need an API that can return the total sales commissions for a given sales representative. We want to persist our sales data in a database as well.
-
 ## Setup
-
-Expects a running PostgreSQL database
 
 ```
 bundle install
-bundle exec rails db:create
+bundle exec rspec
 ```
-
-Use `bundle exec rspec` to run tests
 
