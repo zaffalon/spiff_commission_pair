@@ -58,7 +58,7 @@ We can use some variables to make the equation more readable and easier to under
 `individual_sales`: is the individual sales for each sales representative
 
 
-The default equation is: `"team_rate * total_sales + individual_rate * individual_sales"`, but we can pass any equation we want to calculate the commission.
+The default equation is: `"individual_sales * individual_rate + individual_sales * team_rate"`, but we can pass any equation we want to calculate the commission.
 
 Some exemples of use:
 ```
