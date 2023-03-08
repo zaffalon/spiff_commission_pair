@@ -50,9 +50,13 @@ My second decision was to use a string equation that we can transform in a funct
 We can use some variables to make the equation more readable and easier to understand.
 
 `team_rate`: is the commission rate for the team (0.1, 0.15, 0.2)
+
 `individual_rate`: is the commission rate for the individual (0.05, 0.075, 0.1)
+
 `total_sales`: is the total amount from all sales
+
 `individual_sales`: is the individual sales for each sales representative
+
 
 The default equation is: `"team_rate * total_sales + individual_rate * individual_sales"`, but we can pass any equation we want to calculate the commission.
 
