@@ -41,3 +41,41 @@ bundle exec rspec
 * Please leave any comments that will help the reader understand important decisions you made, shortcuts taken, or things you would do differently in the future.
 * Please talk out loud while pairing, explaining your intentions and decision making.
 
+# Changes
+
+I decided to not hardcoded the commission rates and the commission equation and instead use a configuration file with some defauts values. This way, if the commission rates change, we can just change the configuration file and the code will still work. Aditionally we can pass them as parameters to the class.
+
+My second decision was to use a string equation that we can transform in a function to calculate the commission for the sales representative.
+
+We can use some variables to make the equation more readable and easier to understand.
+
+`team_rate`: is the commission rate for the team (0.1, 0.15, 0.2)
+`individual_rate`: is the commission rate for the individual (0.05, 0.075, 0.1)
+`total_sales`: is the total amount from all sales
+`individual_sales`: is the individual sales for each sales representative
+
+The default equation is: `"team_rate * total_sales + individual_rate * individual_sales"`, but we can pass any equation we want to calculate the commission.
+
+Some exemples of use:
+```
+# Changing the team rates
+team_rates = {
+                (0..9_999.99) => 0.1,
+                (10_000..59_999.99) => 0.15,
+                (60_000..Float::INFINITY) => 0.2,
+            }
+
+SalesCommission::Calculator.new(50_000, sales_representatives, team_rates: team_rates)
+
+# Changing the individual rates
+individual_rates =  {
+                        (0..999.99) => 0.05,
+                        (1_000..1_999.99) => 0.075,
+                        (2_000..Float::INFINITY) => 0.1,
+                    }
+
+SalesCommission::Calculator.new(50_000, sales_representatives, individual_rates: individual_rates) 
+
+# Changing the equation
+SalesCommission::Calculator.new(50_000, sales_representatives, personalized_equation: "individual_sales * team_rate * individual_rate")
+```
