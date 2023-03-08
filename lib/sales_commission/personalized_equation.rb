@@ -1,6 +1,6 @@
 module SalesCommission
   class PersonalizedEquation
-    attr_reader :personalized_equation, :sales_representative, :team_rate, :individual_rate, :total_sales, :individual_sales
+    attr_reader :team_rate, :individual_rate, :total_sales, :individual_sales
 
     def initialize(personalized_equation, sales_representative, team_rate, individual_rate, total_sales)
       @personalized_equation = personalized_equation || Defaults::EQUATION_TEMPLATE
