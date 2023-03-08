@@ -1,4 +1,4 @@
-require_relative '../lib/sales_commission/calculator'
+require_relative '../../lib/sales_commission/calculator'
 
 RSpec.describe SalesCommission::Calculator do
   let(:sales_representatives) do
